@@ -18,6 +18,7 @@
 all: dummy.so
 
 dummy.so: dummy.go
+	export CGO_LDFLAGS_ALLOW=".*\.*"
 	go build -x -buildmode=c-shared -o dummy.so
 
 test:

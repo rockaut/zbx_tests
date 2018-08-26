@@ -15,11 +15,10 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
-CGO_LDFLAGS_ALLOW=".*\.*"
-
 all: dummy.so
 
 dummy.so: dummy.go
+	go get github.com/rockaut/g2z
 	go build -x -buildmode=c-shared -o dummy.so
 
 test:

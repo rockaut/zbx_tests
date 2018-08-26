@@ -26,7 +26,7 @@ import (
 	"errors"
 	"fmt"
 	//"github.com/cavaliercoder/g2z"
-	"github.com/rockaut/g2z"
+	"github.com/rockaut/g2z/tree/v3"
 	"math/rand"
 	"os"
 	"runtime"

@@ -18,7 +18,7 @@
 all: dummy.so
 
 dummy.so: dummy.go
-	go get github.com/rockaut/g2z
+	go get github.com/rockaut/g2z/tree/v3
 	go build -x -buildmode=c-shared -o dummy.so
 
 test:

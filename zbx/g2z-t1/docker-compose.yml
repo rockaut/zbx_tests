@@ -79,7 +79,7 @@ services:
 #   - /etc/localtime:/etc/localtime:ro
 #   - /etc/timezone:/etc/timezone:ro
    - ./zbx_env/etc/zabbix/zabbix_agentd.d:/etc/zabbix/zabbix_agentd.d:ro
-   - ./modules:/var/lib/zabbix/modules:ro
+   - ./:/var/lib/zabbix/modules:ro
   links:
    - zabbix-server:zabbix-server
   environment:

@@ -84,6 +84,7 @@ services:
    - zabbix-server:zabbix-server
   environment:
    - ZBX_LOADMODULE="dummy.so"
+   - ZBX_SERVER_HOST=zabbix-server
   user: root
   privileged: true
   pid: "host"
@@ -91,8 +92,6 @@ services:
    zbx_net_backend:
     aliases:
      - zabbix-agent
-     - zabbix-agent-passive
-     - zabbix-agent-ubuntu
   stop_grace_period: 5s
   labels:
    com.zabbix.description: "Zabbix agent"
